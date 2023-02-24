@@ -1,9 +1,12 @@
-// Rust Dash Library
+// Rust Thought Library
+//
 // Originally written in 2014 by
 //     Andrew Poelstra <apoelstra@wpsoftware.net>
 //     For Bitcoin
 // Updated for Dash in 2022 by
 //     The Dash Core Developers
+// Updated for Thought in 2023 by
+//     Thought Network LLC
 //
 // To the extent possible under law, the author(s) have dedicated all
 // copyright and related and neighboring rights to this software to
@@ -15,10 +18,10 @@
 // If not, see <http://creativecommons.org/publicdomain/zero/1.0/>.
 //
 
-//! # Rust Dash Library
+//! # Rust Thought Library
 //!
-//! This is a library that supports the Dash network protocol and associated
-//! primitives. It is designed for Rust programs built to work with the Bitcoin
+//! This is a library that supports the Thought network protocol and associated
+//! primitives. It is designed for Rust programs built to work with the Thought
 //! network.
 //!
 //! It is also written entirely in Rust to illustrate the benefits of strong type
@@ -70,7 +73,7 @@ compile_error!("at least one of the `std` or `no-std` features must be enabled")
 
 // Disable 16-bit support at least for now as we can't guarantee it yet.
 #[cfg(target_pointer_width = "16")]
-compile_error!("rust-bitcoin currently only supports architectures with pointers wider
+compile_error!("rust-thought currently only supports architectures with pointers wider
                 than 16 bits, let us know if you want 16-bit support. Note that we do
                 NOT guarantee that we will implement it!");
 
@@ -109,7 +112,7 @@ pub extern crate base64;
 pub extern crate anyhow;
 
 #[cfg(target_pointer_width = "16")]
-compile_error!("rust-bitcoin cannot be used on 16-bit architectures");
+compile_error!("rust-thought cannot be used on 16-bit architectures");
 
 #[cfg(test)]
 #[macro_use]

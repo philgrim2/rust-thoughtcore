@@ -1,4 +1,4 @@
-//! Dash serde utilities.
+//! Thought serde utilities.
 //!
 //! This module is for special serde serializations.
 //!

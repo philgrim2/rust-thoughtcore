@@ -1,9 +1,12 @@
-// Rust Dash Library
+// Rust Thought Library
+//
 // Originally written in 2014 by
 //     Andrew Poelstra <apoelstra@wpsoftware.net>
 //     For Bitcoin
 // Updated for Dash in 2022 by
 //     The Dash Core Developers
+// Updated for Thought in 2023 by
+//     Thought Network LLC
 //
 // To the extent possible under law, the author(s) have dedicated all
 // copyright and related and neighboring rights to this software to
@@ -15,14 +18,14 @@
 // If not, see <http://creativecommons.org/publicdomain/zero/1.0/>.
 //
 
-//! Dash policy.
+//! Thought policy.
 //!
 //! This module exposes some constants and functions used in the reference
 //! implementation and which, as a consequence, define some network rules.
 //!
 //! # *Warning*
 //! While the constants present in this module are very unlikely to change, they do not define
-//! Bitcoin. As such they must not be relied upon as if they were consensus rules.
+//! Thought. As such they must not be relied upon as if they were consensus rules.
 //!
 //! These values were taken from bitcoind v0.21.1 (194b9b8792d9b0798fdb570b79fa51f1d1f5ebaf).
 //!
@@ -58,7 +61,7 @@ pub const DEFAULT_MIN_RELAY_TX_FEE: u32 = 1_000;
 /// mempools.
 pub const DEFAULT_MEMPOOL_EXPIRY: u32 = 336;
 
-/// The virtual transaction size, as computed by default by bitcoind node.
+/// The virtual transaction size, as computed by default by thoughtd node.
 pub fn get_virtual_tx_size(weight: i64, n_sigops: i64) -> i64 {
     (cmp::max(weight, n_sigops * DEFAULT_BYTES_PER_SIGOP as i64) + WITNESS_SCALE_FACTOR as i64 - 1)
         / WITNESS_SCALE_FACTOR as i64

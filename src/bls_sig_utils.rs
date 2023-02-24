@@ -1,6 +1,9 @@
-// Rust Dash Library
+// Rust Thought Library
+// Converted from the Rust Dash Library
 // Written by
 //   The Rust Dash developers
+//
+// By Thought Network LLC
 //
 // To the extent possible under law, the author(s) have dedicated all
 // copyright and related and neighboring rights to this software to
@@ -12,7 +15,7 @@
 // If not, see <http://creativecommons.org/publicdomain/zero/1.0/>.
 //
 
-//! Dash BLS elements
+//! Thought BLS elements
 //! Convenience wrappers around fixed size arrays of 48 and 96 bytes representing the public key
 //! and signature.
 //!
@@ -21,7 +24,7 @@ use core::{fmt};
 
 impl_array_newtype!(BLSPublicKey, u8, 48);
 impl_bytes_newtype!(BLSPublicKey, 48);
-/// A BLS Public key is 48 bytes in the scheme used for Dash Core
+/// A BLS Public key is 48 bytes in the scheme used for Thought Core
 #[rustversion::attr(since(1.48), derive(PartialEq, Eq, Ord, PartialOrd, Hash))]
 #[derive(Clone)]
 pub struct BLSPublicKey([u8;48]);
@@ -29,7 +32,7 @@ pub struct BLSPublicKey([u8;48]);
 impl_array_newtype!(BLSSignature, u8, 96);
 impl_bytes_newtype!(BLSSignature, 96);
 
-/// A BLS Signature is 96 bytes in the scheme used for Dash Core
+/// A BLS Signature is 96 bytes in the scheme used for Thought Core
 #[rustversion::attr(since(1.48), derive(PartialEq, Eq, Ord, PartialOrd, Hash))]
 #[derive(Clone)]
 pub struct BLSSignature([u8;96]);

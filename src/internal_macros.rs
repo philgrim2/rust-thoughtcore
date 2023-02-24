@@ -1,9 +1,12 @@
-// Rust Dash Library
+// Rust Thought Library
+//
 // Originally written in 2014 by
 //     Andrew Poelstra <apoelstra@wpsoftware.net>
 //     For Bitcoin
 // Updated for Dash in 2022 by
 //     The Dash Core Developers
+// Updated for Thought in 2023 by
+//     Thought Network LLC
 //
 // To the extent possible under law, the author(s) have dedicated all
 // copyright and related and neighboring rights to this software to
@@ -17,7 +20,7 @@
 
 //! Internal macros.
 //!
-//! Macros meant to be used inside the Rust Dash library.
+//! Macros meant to be used inside the Rust Thought library.
 //!
 
 macro_rules! impl_consensus_encoding {
