@@ -7,3 +7,5 @@ fuzz/hfuzz_workspace
 
 .idea
 .DS_STORE
+
+.project
